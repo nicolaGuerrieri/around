@@ -26,7 +26,7 @@ export class UtilityService {
         resolve(this.coords);
 
       }, (err) => {
-        alert("Please enable GPS localization");
+        alert(err);
         resolve(err);
       });
     });
