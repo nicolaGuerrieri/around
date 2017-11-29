@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Facebook login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-card>
+  <ion-card-content>
+
+    <button ion-button full (click)="loginWithFB()">Login</button>
+    <ion-card *ngIf="userData">
+      <ion-card-header>
+        {{userData.username}}
+      </ion-card-header>
+    </ion-card>
+    <button ion-button (click)="searchLocation()">Get Position</button>
+    <p>Position: {{ coords }}</p>
+    <p>Accuracy: {{ accuracy }} meters</p>
+    <p *ngIf="error">{{ error }}</p>
+  </ion-card-content>
+</ion-card>
